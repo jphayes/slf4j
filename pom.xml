@@ -53,25 +53,6 @@
     </developer>
   </developers>
 
-  <modules>
-    <module>slf4j-api</module>
-    <!--<module>slf4j-scala-api</module>-->
-    <module>slf4j-simple</module>
-    <module>slf4j-nop</module>
-    <module>slf4j-jdk14</module>
-    <module>slf4j-log4j12</module>
-    <module>slf4j-jcl</module>
-    <module>slf4j-android</module>
-    <module>slf4j-ext</module>
-    <module>jcl-over-slf4j</module>
-    <module>log4j-over-slf4j</module>
-    <module>jul-to-slf4j</module>
-    <module>osgi-over-slf4j</module>
-    <module>integration</module>
-    <module>slf4j-site</module>
-    <module>slf4j-migrator</module>
-  </modules>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -365,6 +346,34 @@
           </plugin>
         </plugins>
       </build>
+    </profile>
+
+    <profile>
+      <id>api-only</id>
+      <modules>
+        <module>slf4j-api</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>all</id>
+      <modules>
+        <module>slf4j-api</module>
+        <!--<module>slf4j-scala-api</module>-->
+        <module>slf4j-simple</module>
+        <module>slf4j-nop</module>
+        <module>slf4j-jdk14</module>
+        <module>slf4j-log4j12</module>
+        <module>slf4j-jcl</module>
+        <module>slf4j-android</module>
+        <module>slf4j-ext</module>
+        <module>jcl-over-slf4j</module>
+        <module>log4j-over-slf4j</module>
+        <module>jul-to-slf4j</module>
+        <module>osgi-over-slf4j</module>
+        <module>integration</module>
+        <module>slf4j-site</module>
+        <module>slf4j-migrator</module>
+      </modules>
     </profile>
 
   </profiles>
